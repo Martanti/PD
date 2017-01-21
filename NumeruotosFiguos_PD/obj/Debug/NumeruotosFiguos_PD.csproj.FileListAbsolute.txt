@@ -1,0 +1,6 @@
+C:\Users\user\Desktop\NumeruotosFiguos_PD\bin\Debug\NumeruotosFiguos_PD.exe.config
+C:\Users\user\Desktop\NumeruotosFiguos_PD\bin\Debug\NumeruotosFiguos_PD.exe
+C:\Users\user\Desktop\NumeruotosFiguos_PD\bin\Debug\NumeruotosFiguos_PD.pdb
+C:\Users\user\Desktop\NumeruotosFiguos_PD\obj\Debug\NumeruotosFiguos_PD.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\NumeruotosFiguos_PD\obj\Debug\NumeruotosFiguos_PD.exe
+C:\Users\user\Desktop\NumeruotosFiguos_PD\obj\Debug\NumeruotosFiguos_PD.pdb
