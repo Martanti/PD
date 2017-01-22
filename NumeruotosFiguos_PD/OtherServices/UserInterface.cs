@@ -28,9 +28,14 @@ namespace OtherServices
             }
 
             Console.WriteLine("\nBanko turima figura\n");
-            Console.WriteLine("{0}", _bankoInfo.TurimosFiguros[0].Pavadinimas);       
-            Console.WriteLine("------------------------------------------------------ \n");
-            Console.WriteLine("Jusu veiksmas\n1 - Traukti korta\n2 - Padidinti statotmu tasku suma\n3 - Uzbaigti rounda");
+            Console.WriteLine("{0}", _bankoInfo.TurimosFiguros[0].Pavadinimas);
+#if DEBUG
+            Console.WriteLine("{0}", _bankoInfo.TurimosFiguros[1].Pavadinimas);
+#endif     
+            Console.WriteLine("------------------------------------------------------ \n\n");
+            Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+            Console.WriteLine("Galimi veiksmai\n1 - Traukti paipldoma figura\n2 - Padidinti statotmu tasku suma\n3 - Uzbaigti raunda");
+            Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
 
             int zaidejoAtsakymas;
 
@@ -46,9 +51,11 @@ namespace OtherServices
             //prideti figura
             if (zaidejoAtsakymas == 1)
             {
+                Console.WriteLine("\nTraukiama nauja figura");
+
                 _ZaidejoInfo.TurimosFiguros.Add(NaujaFigura.Generuoti());
                 _ZaidejoInfo.RaundoTaskai += _ZaidejoInfo.TurimosFiguros[_ZaidejoInfo.TurimosFiguros.Count - 1].TaskuKiekis;
-
+                Console.WriteLine("Nauja figura - {0}", _ZaidejoInfo.TurimosFiguros[_ZaidejoInfo.TurimosFiguros.Count - 1].Pavadinimas);
             }
 
             //pakeisti statoma suma

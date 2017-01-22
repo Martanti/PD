@@ -19,6 +19,7 @@ namespace NumeruotosFiguos_PD
             
             while (arNoriteZaisti == "T" || arNoriteZaisti == "t")
             {
+                bool roundoWhile = true;
 
                 //zaideju deklaravimas            
                 Player zaidejas = new Player();
@@ -29,8 +30,10 @@ namespace NumeruotosFiguos_PD
 
                 zaidejas.BendriTaskai = 500;
                 bank.BendriTaskai = 10000000;
-                while (true)
+                while (roundoWhile)
                 {
+                    bool userioWhile = true;
+
                     Console.WriteLine("------------------------------------------------------ ");
                     Console.WriteLine("Prasideda naujas raundas");
                     Console.WriteLine("------------------------------------------------------ \n");
@@ -63,24 +66,35 @@ namespace NumeruotosFiguos_PD
                         zaidejas.TurimosFiguros.Add(NaujaFigura.Generuoti());
                         zaidejas.RaundoTaskai += zaidejas.TurimosFiguros[zaidejas.TurimosFiguros.Count - 1].TaskuKiekis;
 
+                        for (int a = 0; a < 100090000; a++)
+                        {
+
+                        }
+
                         bank.TurimosFiguros.Add(NaujaFigura.Generuoti());
                         bank.RaundoTaskai += bank.TurimosFiguros[bank.TurimosFiguros.Count - 1].TaskuKiekis;
 
+                        for (int a = 0; a < 100090000; a++)
+                        {
+
+                        }
+
                     }
 
-                    while(true)
+                    while(userioWhile)
                     {
-                        UserInterface.ZaidejoEjimas(zaidejas, bank, raundoPiniguBankas);
+                       raundoPiniguBankas = UserInterface.ZaidejoEjimas(zaidejas, bank, raundoPiniguBankas);
 
                         if (raundoPiniguBankas == 0)
                         {
-                            Console.WriteLine("/nPasibaige raundas");
-                            break;
+                            Console.WriteLine("\nPasibaige raundas\n");
+                            userioWhile = false;
                         }
                     }
                     if (zaidejas.BendriTaskai <= 0)
                     {
                         Console.WriteLine("Deja, nebeturite daugiau tasku, kad galetumete testi \nJusu tasku kiekis yra nepakankamas, kad butu issaugotas i zaideju lentele");
+                        arNoriteZaisti = "N";
                     }
                     else
                     {
@@ -88,7 +102,7 @@ namespace NumeruotosFiguos_PD
                         {
                             Console.WriteLine("Sveikiname!!! \nJus, {0}, pasiekete masksimalu zaidimo tasku kieki!\nIrasisime Jus i zaideju lentele", zaidejas.Name);
                             //kodas kuris iraso i sql lentele
-                            break;
+                            arNoriteZaisti = "N";
                         }
 
                         else
@@ -97,7 +111,7 @@ namespace NumeruotosFiguos_PD
                             if (Console.ReadLine().ToLower() == "baigti")
                             {
                                 //kodas kuris iraso i sql lentele
-                                break;
+                                arNoriteZaisti = "N";
                             }
                         }
 

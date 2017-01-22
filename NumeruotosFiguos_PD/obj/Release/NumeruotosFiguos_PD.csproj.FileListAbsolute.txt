@@ -1,0 +1,6 @@
+C:\Users\user\Documents\GitHub\PD\NumeruotosFiguos_PD\bin\Release\NumeruotosFiguos_PD.exe.config
+C:\Users\user\Documents\GitHub\PD\NumeruotosFiguos_PD\bin\Release\NumeruotosFiguos_PD.exe
+C:\Users\user\Documents\GitHub\PD\NumeruotosFiguos_PD\bin\Release\NumeruotosFiguos_PD.pdb
+C:\Users\user\Documents\GitHub\PD\NumeruotosFiguos_PD\obj\Release\NumeruotosFiguos_PD.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\PD\NumeruotosFiguos_PD\obj\Release\NumeruotosFiguos_PD.exe
+C:\Users\user\Documents\GitHub\PD\NumeruotosFiguos_PD\obj\Release\NumeruotosFiguos_PD.pdb
