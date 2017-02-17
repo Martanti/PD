@@ -1,0 +1,13 @@
+C:\Users\user\Documents\GitHub\PD\PDV2\bin\Debug\PDV2.exe.config
+C:\Users\user\Documents\GitHub\PD\PDV2\bin\Debug\PDV2.exe
+C:\Users\user\Documents\GitHub\PD\PDV2\bin\Debug\PDV2.pdb
+C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.Properties.Resources.resources
+C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.csproj.GenerateResource.Cache
+C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.exe
+C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.pdb
+C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.PradinisLaukas.resources
+C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.ZaidimoLaukas.resources
+C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.StatymuLangas.resources
+C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.NewPlayer.resources
+C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.PradinisStatymas.resources

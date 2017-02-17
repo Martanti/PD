@@ -7,8 +7,9 @@ using FigureServices;
 
 namespace OtherServices
 {
-    public static class NaujaFigura
+     public static class FigurosKomandos
     {
+
         private static List<Figura> PanaudotosFiguros = new List<Figura>();
 
         public static Figura Generuoti()
@@ -20,7 +21,7 @@ namespace OtherServices
 
             for (int i = 1; i < 2; i++)
             {
-                
+
 
                 int figurosTipoSkaicius = rnd.Next(1, 5);
                 if (figurosTipoSkaicius == 1)
@@ -47,31 +48,24 @@ namespace OtherServices
                 {
                     FigurosPavadinimas = "Kugis";
                 }
-                // jei prireiks
-                /*
-                else if (figurosTipoSkaicius == 6)
-                {
-                    FigurosPavadinimas = "Gal dar kokia figura";
-                }
-                */
 
                 _figura.TaskuKiekis = rnd.Next(1, 10);
                 _figura.Pavadinimas = FigurosPavadinimas + _figura.TaskuKiekis.ToString();
 
-                    if (PanaudotosFiguros.Contains(_figura) == true)
-                    {
-                        i--;
-                    }
+                if (PanaudotosFiguros.Contains(_figura) == true)
+                {
+                    i--;
+                }
 
-                    else
-                    {
-                        PanaudotosFiguros.Add(_figura);
-                    }
-                
+                else
+                {
+                    PanaudotosFiguros.Add(_figura);
+                }
+
 
             }
             return _figura;
-               
+
         }
 
     }

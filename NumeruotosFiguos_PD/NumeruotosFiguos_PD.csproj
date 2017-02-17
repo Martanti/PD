@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FigureServices\Figura.cs" />
-    <Compile Include="OtherServices\SugeneruotiNaujaFigura.cs" />
+    <Compile Include="OtherServices\FigurosKomandos.cs" />
     <Compile Include="OtherServices\UserInterface.cs" />
     <Compile Include="PlayersServies\Bankas.cs" />
     <Compile Include="PlayersServies\Player.cs" />
