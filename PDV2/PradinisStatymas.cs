@@ -21,7 +21,8 @@ namespace PDV2
         public PradinisStatymas(Player playerInformation, Bank bankInformation)
         {
             InitializeComponent();
-
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             player = playerInformation;
             bank = bankInformation;
 
@@ -35,16 +36,26 @@ namespace PDV2
             int statomiZaidejoTaskai;
             bool arGeraiIvede = true;
             arGeraiIvede = Int32.TryParse(txtBx_Statymai.Text, out statomiZaidejoTaskai);
-            if (arGeraiIvede == false)
+            if (arGeraiIvede == false || txtBx_Statymai.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Įvyko klaida, prašome įvesti dar kartą");
             }
             else
             {
+                if (statomiZaidejoTaskai < 0)
+                {
+                    statomiZaidejoTaskai *= -1;
+                }
+
                 if (statomiZaidejoTaskai > player.BendriTaskai || statomiZaidejoTaskai > bank.BendriTaskai)
                 {
                     MessageBox.Show("Prašome pasirinkti mažesnę sumą");
                 }
+                else if (statomiZaidejoTaskai == 0)
+                {
+                    MessageBox.Show("Statymas negali būti 0");
+                }
+                
                 else
                 {
                     player.BendriTaskai -= statomiZaidejoTaskai;

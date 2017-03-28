@@ -65,7 +65,7 @@
             this.btn_Scoreboard.Name = "btn_Scoreboard";
             this.btn_Scoreboard.Size = new System.Drawing.Size(160, 23);
             this.btn_Scoreboard.TabIndex = 2;
-            this.btn_Scoreboard.Text = "Top žaidėjų taškai";
+            this.btn_Scoreboard.Text = "Top 10 žaidėjų";
             this.btn_Scoreboard.UseVisualStyleBackColor = true;
             this.btn_Scoreboard.Click += new System.EventHandler(this.btn_Scoreboard_Click);
             // 
@@ -99,7 +99,7 @@
             this.Controls.Add(this.pnl_Pradinis);
             this.Name = "PradinisLaukas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Pradinis Laukas";
             this.pnl_Pradinis.ResumeLayout(false);
             this.ResumeLayout(false);
 

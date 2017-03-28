@@ -20,10 +20,13 @@ namespace PDV2
         public StatymuLangas(Player playerInformation, Bank bankInformation, int senasStatymas, bool _arJauNePirmasKartas)
         {
             InitializeComponent();
-            naujasStatymas = senasStatymas;
-            player = playerInformation;
-            bank = bankInformation;
-            arJauNePirmasKartas = _arJauNePirmasKartas;
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
+            this.naujasStatymas = senasStatymas;
+            this.player = playerInformation;
+            this.bank = bankInformation;
+            this.arJauNePirmasKartas = _arJauNePirmasKartas;
 
             lbl_taskai.Text = "Žaidėjo bendri taškai :\n" + player.BendriTaskai.ToString() + "\n\nBanko bendri taškai:\n" + bank.BendriTaskai.ToString();
 
@@ -41,10 +44,21 @@ namespace PDV2
             }
             else
             {
-                if (statymas > player.BendriTaskai || statymas > bank.BendriTaskai)
+                if (statymas < 0)
+                {
+                    statymas *= -1;
+                }
+
+                if (statymas == 0)
+                {
+                    MessageBox.Show("Statymas negali būti 0");
+                }
+
+                else if (statymas > player.BendriTaskai || statymas > bank.BendriTaskai)
                 {
                     MessageBox.Show("Prašome pasirinkti mažesnę sumą");
                 }
+
                 else
                 {
                     player.BendriTaskai -= statymas;

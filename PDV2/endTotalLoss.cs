@@ -15,6 +15,8 @@ namespace PDV2
         public EndTotalLoss()
         {
             InitializeComponent();
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             lbl_FinalText.Text = "Tu visiškai pralaimėjai, bet visada galima pradėti iš naujo";
         }
 
@@ -28,7 +30,9 @@ namespace PDV2
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
-
+            PradinisLaukas pl = new PradinisLaukas();
+            pl.Show();
+            this.Close();
         }
     }
 }

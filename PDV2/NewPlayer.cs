@@ -16,24 +16,31 @@ namespace PDV2
         public NewPlayer()
         {
             InitializeComponent();
-
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
         }
 
         private void btn_createPlayer_Click(object sender, EventArgs e)
         {
             Player player = new Player();
-            player.Name = txtBx_playerName.Text.ToString();
+            if (string.IsNullOrWhiteSpace(txtBx_playerName.Text))
+            {
+                MessageBox.Show("Įvyko klaida, prašome įvesti dar kartą");
+            }
+            else
+            {
+                player.Name = txtBx_playerName.Text.TrimEnd().TrimStart().ToString();
 
-            player.BendriTaskai = 500;
+                player.BendriTaskai = 500;
 
-            Bank bankas = new Bank();
-            bankas.BendriTaskai = 999999500;
+                Bank bankas = new Bank();
+                bankas.BendriTaskai = 999999500;
 
-            PradinisStatymas psLauk = new PradinisStatymas(player, bankas);
-            psLauk.Show();
-            this.Hide();
-
+                PradinisStatymas psLauk = new PradinisStatymas(player, bankas);
+                psLauk.Show();
+                this.Hide();
+            }
 
 
 

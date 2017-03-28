@@ -11,3 +11,8 @@ C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.ZaidimoLaukas.resources
 C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.StatymuLangas.resources
 C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.NewPlayer.resources
 C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.PradinisStatymas.resources
+C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.EndTotalLoss.resources
+C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.Nugaletojai.resources
+C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.PaprastasLaimejimas.resources
+C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.TotalWin.resources
+C:\Users\user\Documents\GitHub\PD\PDV2\obj\Debug\PDV2.ArTikraiNoriIseiti.resources

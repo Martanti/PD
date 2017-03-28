@@ -36,11 +36,11 @@
             // lbl_FinalText
             // 
             this.lbl_FinalText.AutoSize = true;
-            this.lbl_FinalText.Location = new System.Drawing.Point(167, 25);
+            this.lbl_FinalText.Location = new System.Drawing.Point(54, 21);
             this.lbl_FinalText.Name = "lbl_FinalText";
-            this.lbl_FinalText.Size = new System.Drawing.Size(35, 13);
+            this.lbl_FinalText.Size = new System.Drawing.Size(76, 13);
             this.lbl_FinalText.TabIndex = 0;
-            this.lbl_FinalText.Text = "label1";
+            this.lbl_FinalText.Text = "Čia yra tekstas";
             // 
             // btn_NewGame
             // 

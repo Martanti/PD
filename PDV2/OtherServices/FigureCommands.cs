@@ -68,5 +68,10 @@ namespace OtherServices
 
         }
 
+        public static void PradedamIsNaujo()
+        {
+            PanaudotosFiguros.Clear();
+        }
+
     }
 }

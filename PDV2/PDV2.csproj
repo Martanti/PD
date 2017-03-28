@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArTikraiNoriIseiti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArTikraiNoriIseiti.Designer.cs">
+      <DependentUpon>ArTikraiNoriIseiti.cs</DependentUpon>
+    </Compile>
     <Compile Include="EndTotalLoss.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,7 +65,24 @@
     <Compile Include="NewPlayer.Designer.cs">
       <DependentUpon>NewPlayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nugaletojai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nugaletojai.Designer.cs">
+      <DependentUpon>Nugaletojai.cs</DependentUpon>
+    </Compile>
     <Compile Include="OtherServices\FigureCommands.cs" />
+    <Compile Include="PaprastasLaimejimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaprastasLaimejimas.Designer.cs">
+      <DependentUpon>PaprastasLaimejimas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PD_NugaletojuSarasasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PD_NugaletojuSarasasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PlayerServices\Bank.cs" />
     <Compile Include="PlayerServices\Player.cs" />
     <Compile Include="PradinisLaukas.cs">
@@ -80,6 +103,12 @@
     <Compile Include="StatymuLangas.Designer.cs">
       <DependentUpon>StatymuLangas.cs</DependentUpon>
     </Compile>
+    <Compile Include="TotalWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TotalWin.Designer.cs">
+      <DependentUpon>TotalWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="ZaidimoLaukas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,11 +117,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ArTikraiNoriIseiti.resx">
+      <DependentUpon>ArTikraiNoriIseiti.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EndTotalLoss.resx">
       <DependentUpon>EndTotalLoss.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewPlayer.resx">
       <DependentUpon>NewPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nugaletojai.resx">
+      <DependentUpon>Nugaletojai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaprastasLaimejimas.resx">
+      <DependentUpon>PaprastasLaimejimas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PradinisLaukas.resx">
       <DependentUpon>PradinisLaukas.cs</DependentUpon>
@@ -112,9 +150,23 @@
     <EmbeddedResource Include="StatymuLangas.resx">
       <DependentUpon>StatymuLangas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TotalWin.resx">
+      <DependentUpon>TotalWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ZaidimoLaukas.resx">
       <DependentUpon>ZaidimoLaukas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="PD_NugaletojuSarasasDataSet.xsc">
+      <DependentUpon>PD_NugaletojuSarasasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PD_NugaletojuSarasasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PD_NugaletojuSarasasDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PD_NugaletojuSarasasDataSet.xss">
+      <DependentUpon>PD_NugaletojuSarasasDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

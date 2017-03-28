@@ -24,13 +24,14 @@ namespace PDV2
         public ZaidimoLaukas(Player playerInformation, Bank bankInformation, int _statymas, bool _arJauNePirmasKartas)
         {
             InitializeComponent();
-
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             player = playerInformation;
             bank = bankInformation;
             arJauNePirmasKartas = _arJauNePirmasKartas;
             if (arJauNePirmasKartas == false)
             {
-                
+                FigurosKomandos.PradedamIsNaujo();
 
                 player.TurimosFiguros.Add(FigurosKomandos.Generuoti());
                 player.RaundoTaskai += player.TurimosFiguros[player.TurimosFiguros.Count - 1].TaskuKiekis;
@@ -114,14 +115,16 @@ namespace PDV2
         {
             if (player.RaundoTaskai >21)
             {
-                MessageBox.Show("{0} pralaimėjo, nes viršijo 21-no taško ribą.", player.Name);
+                MessageBox.Show(String.Format( "{0} pralaimėjo, nes viršijo 21-no taško ribą.", player.Name));
                 bank.BendriTaskai += statymas;
+                
             }
 
             else if (bank.RaundoTaskai > 21)
             {
-                MessageBox.Show("{0} laimėjo, nes bankas viršijo 21-no taško ribą.", player.Name);
+                MessageBox.Show(String.Format("{0} laimėjo, nes bankas viršijo 21-no taško ribą.", player.Name));
                 player.BendriTaskai += statymas;
+                
             }
 
             else
@@ -134,70 +137,83 @@ namespace PDV2
 
                 if (bank.RaundoTaskai > 21)
                 {
-                    MessageBox.Show("{0} laimėjo, nes bankas viršijo 21-no taško ribą.", player.Name);
+                    MessageBox.Show(String.Format("{0} laimėjo, nes bankas viršijo 21-no taško ribą.", player.Name));
                     player.BendriTaskai += statymas;
                 }
 
                 if (player.RaundoTaskai == 21)
                 {
-                    MessageBox.Show("{0} laimėjo, nes surinko 21-ną tašką!", player.Name);
+                    MessageBox.Show(String.Format("{0} laimėjo, nes surinko 21-ną tašką!", player.Name));
                     player.BendriTaskai += statymas;
                 }
                 else if (bank.RaundoTaskai == 21)
                 {
-                    MessageBox.Show("{0} pralaimėjo, nes bankas surinko 21-ną tašką.", player.Name);
+                    MessageBox.Show(String.Format("{0} pralaimėjo, nes bankas surinko 21-ną tašką.", player.Name));
                     bank.BendriTaskai += statymas;
                 }
 
                 else if (player.RaundoTaskai == bank.RaundoTaskai)
                 {
-                    MessageBox.Show("Lygiosios! {0} ir bankas surinko vienodą taškų kiekį", player.Name);
+                    MessageBox.Show(String.Format("Lygiosios! {0} ir bankas surinko vienodą taškų kiekį", player.Name));
                     bank.BendriTaskai += statymas / 2;
                     player.BendriTaskai += statymas / 2;
                 }
 
                 else if (player.RaundoTaskai > bank.RaundoTaskai)
                 {
-                    MessageBox.Show("{0} laimėjo, nes surinko daugiau taškų nei bankas.", player.Name);
+                    MessageBox.Show(String.Format("{0} laimėjo, nes surinko daugiau taškų nei bankas.", player.Name));
                     player.BendriTaskai += statymas;
                 }
 
                 else if (bank.RaundoTaskai > player.RaundoTaskai)
                 {
-                    MessageBox.Show("{0} pralaimėjo, nes bankas surinko daugiau taškų.", player.Name);
+                    MessageBox.Show(String.Format("{0} pralaimėjo, nes bankas surinko daugiau taškų.", player.Name));
                     bank.BendriTaskai += statymas;
                 }
 
-            }
-            //pralaimejo visiskai
-            if (player.BendriTaskai == 0)
-            {
 
+            }
+
+            //pralaimejo visiskai
+            if ((player.BendriTaskai == 0 && player.Name != "pd_nugaletojas")|| player.Name == "pd_pralaimetojas") 
+            {
+                EndTotalLoss end = new EndTotalLoss();
+                end.Show();
+                this.Close();
             }
 
             //galima testi zaidima
 
-            else if (player.BendriTaskai > 0 && bank.BendriTaskai>0 )
+            else if (player.BendriTaskai > 0 && bank.BendriTaskai>0 && player.Name != "pd_nugaletojas")
             {
-
+                PaprastasLaimejimas pll = new PaprastasLaimejimas(player, bank);
+                pll.Show();
+                this.Close();
             }
 
             //istustejo bankas
 
             else
             {
-
+                TotalWin tw = new TotalWin(player);
+                tw.Show();
+                this.Close();
             }
+
 
         }
 
         private void btn_Rules_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Žaidimo tikslas: surinkti figūras, kurių taškų kiekis neviršytų 21 taško.\nŽaidėjas bei bankas raundo pradžioje gauna po dvi figūras.\nŽaidėjas gali matyti visas savo turimas figūras bei vieną banko turimą\nŽaidėjas gali pasirnkti 3 veiksmus:\n-Imti naują figūrą\n-Padidinti statomų taškų kiekį\n-Užbaigti raundą\nUžbaigus raundą bus susumuoti žaidėjo bei banko taškai ir palyginti.Didžiausia taškų, neviršijanti 21-no taško, suma suteikia pergalę.");
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
         {
+            ArTikraiNoriIseiti exit = new ArTikraiNoriIseiti(player);
+            exit.Show();
+            this.Close();
+            
 
         }
     }

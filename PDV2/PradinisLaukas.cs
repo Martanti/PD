@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace PDV2
 {
     public partial class PradinisLaukas : Form
@@ -15,6 +14,8 @@ namespace PDV2
         public PradinisLaukas()
         {
             InitializeComponent();
+            this.ControlBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
         }
 
@@ -36,14 +37,15 @@ namespace PDV2
 
         private void btn_Scoreboard_Click(object sender, EventArgs e)
         {
+            Nugaletojai nugLang = new Nugaletojai();
+            nugLang.Show();
             
-
 
         }
 
         private void btn_Exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 }
     }

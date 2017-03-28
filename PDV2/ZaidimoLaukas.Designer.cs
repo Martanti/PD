@@ -36,6 +36,7 @@
             this.lbl_CurrentStakes = new System.Windows.Forms.Label();
             this.btn_Rules = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // btn_NewFigure
@@ -147,5 +148,6 @@
         private System.Windows.Forms.Label lbl_CurrentStakes;
         private System.Windows.Forms.Button btn_Rules;
         private System.Windows.Forms.Button btn_Exit;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
