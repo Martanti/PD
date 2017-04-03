@@ -132,7 +132,7 @@
             this.Controls.Add(this.btn_NewFigure);
             this.Name = "ZaidimoLaukas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Žaidimo laukas";
             this.ResumeLayout(false);
             this.PerformLayout();
 

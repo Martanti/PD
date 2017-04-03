@@ -32,6 +32,7 @@ namespace PDV2
             if (arJauNePirmasKartas == false)
             {
                 FigurosKomandos.PradedamIsNaujo();
+                player.TurimosFiguros.Clear();
 
                 player.TurimosFiguros.Add(FigurosKomandos.Generuoti());
                 player.RaundoTaskai += player.TurimosFiguros[player.TurimosFiguros.Count - 1].TaskuKiekis;

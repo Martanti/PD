@@ -56,7 +56,7 @@
             // lbl_text
             // 
             this.lbl_text.AutoSize = true;
-            this.lbl_text.Location = new System.Drawing.Point(168, 13);
+            this.lbl_text.Location = new System.Drawing.Point(53, 9);
             this.lbl_text.Name = "lbl_text";
             this.lbl_text.Size = new System.Drawing.Size(76, 13);
             this.lbl_text.TabIndex = 2;
@@ -66,12 +66,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(412, 161);
             this.Controls.Add(this.lbl_text);
             this.Controls.Add(this.btn_Continue);
             this.Controls.Add(this.btn_save);
             this.Name = "PaprastasLaimejimas";
-            this.Text = "PaprastasLaimejimas";
+            this.Text = "Sveikiname su laimėjimu!";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -60,7 +60,7 @@
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.lbl_sveikinimai);
             this.Name = "TotalWin";
-            this.Text = "TotalWin";
+            this.Text = "Sveikiname su pergale!";
             this.ResumeLayout(false);
             this.PerformLayout();
 
